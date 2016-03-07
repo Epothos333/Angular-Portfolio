@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Edwin Aoraha</title>
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app='myModule' class='container-fluid edged'>
+	<div class='banner row text-center'>
+			<a id="aboutTag" href='#/aboutView'>About</a>
+			<img id='avatar' src="epothos.png"/>
+			<a id="portfolioTag" href='#/view2'>Portfolio</a>
+	</div>
+	<div ng-view=''></div>
+	 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js'></script>
+	 <script src='node_modules/angular-route/angular-route.min.js'></script>
+	 <script src="app.js"></script>
+	 <script src='angularStuff.js'></script>
+</body>
+</html>
