@@ -7,14 +7,21 @@
 </head>
 <body ng-app='myModule' class='container-fluid edged'>
 	<div class='banner row text-center'>
-			<a id="aboutTag" href='#/aboutView'>About</a>
+
+			<a class="hoverMe" href='#/aboutView'>Home</a>
+			<a class="hoverMe" href='#/aboutView'>About</a>
 			<img id='avatar' src="epothos.png"/>
-			<a id="portfolioTag" href='#/view2'>Portfolio</a>
+			<a class="hoverMe" href='#/portfolioView'>Portfolio</a>
+			<a class="hoverMe" href='#/portfolioView'>Contact</a>
 	</div>
-	<div ng-view=''></div>
+	<div ng-view=''class='col-xs-6 col-xs-offset-3 addTopM'></div>
+	<div class='col-xs-12 text-center'>
+		<footer>
+			<p> @ Edwin Aoraha Products</p>
+		</footer>
+	</div>
 	 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js'></script>
 	 <script src='node_modules/angular-route/angular-route.min.js'></script>
-	 <script src="app.js"></script>
-	 <script src='angularStuff.js'></script>
+	 <script src="all.js"></script>
 </body>
 </html>
