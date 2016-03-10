@@ -11,9 +11,6 @@ app.config([ '$routeProvider',
 		templateUrl: 'portfolioView.html'
 	});
 }]);
-var app = angular.module('myModule');
-
-
 var newAva = document.getElementById('avatar');
 var hovers = document.getElementsByClassName('hoverMe');
 
