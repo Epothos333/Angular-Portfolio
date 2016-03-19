@@ -1,5 +1,14 @@
+h2 {
+  text-decoration: underline;
+}
+.Arial {
+  font-family: Arial;
+}
 a {
   text-decoration: none;
+}
+.indentMe {
+  margin-left: 50px;
 }
 .footer {
   background-color: #cee8f7;

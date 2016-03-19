@@ -9,7 +9,7 @@ gulp.task('stylus', function() {
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('concat',['default'], function() {
+gulp.task('concat', function() {
 	return gulp.src('./javascript/*.js')
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest('./'));

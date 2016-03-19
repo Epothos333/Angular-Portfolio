@@ -7,12 +7,9 @@
 </head>
 <body ng-app='myModule' class='container-fluid edged'>
 	<div class='banner row text-center'>
-
-			<a class="hoverMe" href='#/aboutView'>Home</a>
-			<a class="hoverMe" href='#/aboutView'>About</a>
-			<img id='avatar' src="images/epothos.png"/>
-			<a class="hoverMe" href='#/portfolioView'>Portfolio</a>
-			<a class="hoverMe" href='#/contactView'>Contact</a>
+		<linker go-to='"#/aboutView"' fill='"Resume"'></linker>
+		<img avatar linker id='avatar' ng-click="changeView('/')" src="images/epothos.png">
+		<linker go-to='"#/portfolioView"' fill='"Portfolio"'></linker>
 	</div>
 	<div ng-view=''></div>
 	<div class='text-center'>
