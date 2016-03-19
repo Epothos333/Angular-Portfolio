@@ -5,10 +5,12 @@ app.config([ '$routeProvider',
 	$routeProvider.
 	  when('/aboutView', {
 		templateUrl: 'aboutView.html'
-	});
-	$routeProvider.
+	}).
 	  when('/portfolioView', {
 		templateUrl: 'portfolioView.html'
+	}).
+	  when('/contactView', {
+		templateUrl: 'contactView.html'
 	});
 }]);
 var newAva = document.getElementById('avatar');

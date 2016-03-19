@@ -51,6 +51,23 @@ body {
   border-radius: 15px;
   background-color: #cee8f7;
   box-shadow: 0px 0px 15px #36454f;
+  margin-right: 0;
+}
+.blockMe {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+}
+#rightForm,
+#leftForm {
+  width: 45%;
+  display: inline-block;
+}
+textarea {
+  position: relative;
+  height: 20%;
+  width: 100%;
+  margin-left: 30px;
 }
 .ng-leave {
   animation: rotateOut 0.25s both ease-in;
@@ -62,49 +79,49 @@ body {
 }
 @-moz-keyframes rotateOut {
   to {
-    transform: translateZ(-3000px) rotateZ(720deg);
+    transform: scale(-3000px);
     opacity: 0;
   }
 }
 @-webkit-keyframes rotateOut {
   to {
-    transform: translateZ(-3000px) rotateZ(720deg);
+    transform: scale(-3000px);
     opacity: 0;
   }
 }
 @-o-keyframes rotateOut {
   to {
-    transform: translateZ(-3000px) rotateZ(720deg);
+    transform: scale(-3000px);
     opacity: 0;
   }
 }
 @keyframes rotateOut {
   to {
-    transform: translateZ(-3000px) rotateZ(720deg);
+    transform: scale(-3000px);
     opacity: 0;
   }
 }
 @-moz-keyframes rotateIn {
   from {
-    transform: translateZ(3000px) rotateZ(-720deg);
+    transform: scale(3000px);
     opacity: 1;
   }
 }
 @-webkit-keyframes rotateIn {
   from {
-    transform: translateZ(3000px) rotateZ(-720deg);
+    transform: scale(3000px);
     opacity: 1;
   }
 }
 @-o-keyframes rotateIn {
   from {
-    transform: translateZ(3000px) rotateZ(-720deg);
+    transform: scale(3000px);
     opacity: 1;
   }
 }
 @keyframes rotateIn {
   from {
-    transform: translateZ(3000px) rotateZ(-720deg);
+    transform: scale(3000px);
     opacity: 1;
   }
 }
