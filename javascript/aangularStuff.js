@@ -7,9 +7,7 @@ app.config([ '$routeProvider',
 		templateUrl: 'aboutView.html'
 	}).
 	  when('/portfolioView', {
-		templateUrl: 'portfolioView.html'
-	}).
-	  when('/contactView', {
-		templateUrl: 'contactView.html'
-	});
+		templateUrl: 'portfolioView.html',
+		controller: 'portController'
+	})
 }]);

@@ -1,10 +1,94 @@
 charcoal = #36454f
 bannerBlue = rgb(206,232,247)
 
+
+@-webkit-keyframes middle 
+    from 
+    	height 200px; width 200px; left 200px; top 0px;
+    	
+    to 
+    	height 100px; width 100px; left 500px; top 100px;
+    	
+@-webkit-keyframes right 
+    from 
+    	left 500px; 
+    	
+    to 
+    	left 0px; 
+    	
+@-webkit-keyframes left 
+    from 
+    	height 100px; width 100px; left 0; top 100px; z-index: 0;
+    	
+    to 
+    	height 200px; width 200px; left 200px; top 0; z-index: 1;
+    	
+@-webkit-keyframes big
+    from 
+    	height 100px; width 100px;
+    	
+    to 
+    	height 200px; width 200px;
+    	
+.port
+	position relative
+	height 300px
+	left 30%
+	    	
+.shadow
+	position relative
+	top 100%
+	width 90%
+	height 10px
+	box-shadow 0 50px 30px #545454
+	margin 0 auto
+	border-radius 50px
+
+#left, #middle, #right
+	position absolute
+	margin-top 20px
+	display inline-block
+	border-radius 15px
+	opacity .8
+	
+div a img 
+	position relative
+	width 100%
+
+.red
+	background-color red
+	
+#left
+	height 100px
+	width 100px
+	top 100px
+	left 0px
+	animation right 1s 1
+	
+.green
+	background-color green
+	
+#middle
+	height 200px
+	width 200px
+	left 200px
+	animation left 1s 1
+	
+.blue
+	background-color blue
+	
+#right
+	height 100px
+	width 100px
+	left 500px
+	top 100px
+	animation middle 1s 1
+	
+	// animation right 3s infinite
+
 h2
 	text-decoration underline;
 		
-
 .Arial
 	font-family Arial
 a 

@@ -6,6 +6,9 @@ app.directive('avatar', function() {
 		$scope.changeView = function(view) {
 		$location.path(view);
 			}
+		},
+	link: function(scope, element, attrs) {
+		toggleAva(element, element[0]);
 		}
 	}
 });
@@ -20,14 +23,16 @@ app.directive('linker', function() {
 		},
 		template: "<a href='{{goTo}}'>{{fill}}</a>",
 		link: function(scope, element, attrs) {
-			var img = document.getElementById('avatar');
-			element.bind('mouseover', function() {
-				img.src = 'images/monkey.png';
-			})
-			element.bind('mouseleave', function() {
-				img.src = 'images/epothos.png';
-			})
+			toggleAva(element, document.getElementById('avatar'));
 			}
-
 		}
 	});
+
+function toggleAva(obj, src) {
+	obj.bind('mouseover', function() {
+		src.src = 'images/monkey.png';
+	})
+	obj.bind('mouseleave', function() {
+		src.src = 'images/epothos.png'
+	})
+}
