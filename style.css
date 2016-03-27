@@ -36,20 +36,43 @@
     z-index: 1;
   }
 }
-@-webkit-keyframes big {
+@-webkit-keyframes middley {
+  from {
+    height: 200px;
+    width: 200px;
+    left: 200px;
+    top: 0px;
+  }
+  to {
+    height: 100px;
+    width: 100px;
+    left: 0px;
+    top: 100px;
+  }
+}
+@-webkit-keyframes lefty {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 500px;
+  }
+}
+@-webkit-keyframes righty {
   from {
     height: 100px;
     width: 100px;
+    left: 500;
+    top: 100px;
+    z-index: 0;
   }
   to {
     height: 200px;
     width: 200px;
+    left: 200px;
+    top: 0;
+    z-index: 1;
   }
-}
-.port {
-  position: relative;
-  height: 300px;
-  left: 30%;
 }
 .shadow {
   position: relative;
@@ -62,14 +85,17 @@
 }
 #left,
 #middle,
-#right {
+#right,
+#lefty,
+#righty,
+#middley {
   position: absolute;
   margin-top: 20px;
   display: inline-block;
   border-radius: 15px;
   opacity: 0.8;
 }
-div a img {
+.portPiece {
   position: relative;
   width: 100%;
 }
@@ -83,6 +109,13 @@ div a img {
   left: 0px;
   animation: right 1s 1;
 }
+#lefty {
+  height: 100px;
+  width: 100px;
+  top: 100px;
+  left: 0px;
+  animation: middley 1s 1;
+}
 .green {
   background-color: #008000;
 }
@@ -91,6 +124,12 @@ div a img {
   width: 200px;
   left: 200px;
   animation: left 1s 1;
+}
+#middley {
+  height: 200px;
+  width: 200px;
+  left: 200px;
+  animation: righty 1s 1;
 }
 .blue {
   background-color: #00f;
@@ -101,6 +140,13 @@ div a img {
   left: 500px;
   top: 100px;
   animation: middle 1s 1;
+}
+#righty {
+  height: 100px;
+  width: 100px;
+  left: 500px;
+  top: 100px;
+  animation: lefty 1s 1;
 }
 h2 {
   text-decoration: underline;
@@ -189,6 +235,32 @@ textarea {
 .ng-enter {
   animation: rotateIn 0.25s both ease-in;
   z-index: 1;
+}
+.arrow-right {
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid #cee8f7;
+  display: inline-block;
+  margin-left: 100px;
+}
+.arrow-left {
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-right: 60px solid #cee8f7;
+  display: inline-block;
+  margin-right: 100px;
+}
+.port {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  display: inline-block;
+}
+.scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 50px;
+  height: 100%;
 }
 @-moz-keyframes rotateOut {
   to {

@@ -1,7 +1,7 @@
 charcoal = #36454f
 bannerBlue = rgb(206,232,247)
 
-
+// Right Arrow Animations
 @-webkit-keyframes middle 
     from 
     	height 200px; width 200px; left 200px; top 0px;
@@ -22,19 +22,31 @@ bannerBlue = rgb(206,232,247)
     	
     to 
     	height 200px; width 200px; left 200px; top 0; z-index: 1;
-    	
-@-webkit-keyframes big
+// Left Arrow Animations
+    	// coming from middle
+@-webkit-keyframes middley 
     from 
-    	height 100px; width 100px;
+    	height 200px; width 200px; left 200px; top 0px;
     	
     to 
-    	height 200px; width 200px;
+    	height 100px; width 100px; left 0px; top 100px;
     	
-.port
-	position relative
-	height 300px
-	left 30%
-	    	
+    // coming from left
+@-webkit-keyframes lefty
+    from 
+    	left 0px;
+    	
+    to 
+    	left 500px; 
+    	
+    //coming from right	
+@-webkit-keyframes righty 
+    from 
+    	height 100px; width 100px; left 500; top 100px; z-index: 0;
+    	
+    to 
+    	height 200px; width 200px; left 200px; top 0; z-index: 1;
+
 .shadow
 	position relative
 	top 100%
@@ -44,14 +56,14 @@ bannerBlue = rgb(206,232,247)
 	margin 0 auto
 	border-radius 50px
 
-#left, #middle, #right
+#left, #middle, #right, #lefty, #righty, #middley
 	position absolute
 	margin-top 20px
 	display inline-block
 	border-radius 15px
 	opacity .8
 	
-div a img 
+.portPiece
 	position relative
 	width 100%
 
@@ -65,6 +77,14 @@ div a img
 	left 0px
 	animation right 1s 1
 	
+	
+#lefty
+	height 100px
+	width 100px
+	top 100px
+	left 0px
+	animation middley 1s 1
+	
 .green
 	background-color green
 	
@@ -73,6 +93,12 @@ div a img
 	width 200px
 	left 200px
 	animation left 1s 1
+	
+#middley
+	height 200px
+	width 200px
+	left 200px
+	animation righty 1s 1
 	
 .blue
 	background-color blue
@@ -83,6 +109,13 @@ div a img
 	left 500px
 	top 100px
 	animation middle 1s 1
+	
+#righty
+	height 100px
+	width 100px
+	left 500px
+	top 100px
+	animation lefty 1s 1
 	
 	// animation right 3s infinite
 
@@ -182,4 +215,32 @@ textarea
 .ng-enter
 	animation: rotateIn 0.25s both ease-in
 	z-index: 1
+	
+.arrow-right 
+	border-top 60px solid transparent
+	border-bottom 60px solid transparent
+	border-left 60px solid bannerBlue
+	display inline-block
+	margin-left 100px
+	
+.arrow-left
+	border-top 60px solid transparent
+	border-bottom 60px solid transparent
+	border-right 60px solid bannerBlue
+	display inline-block
+	margin-right 100px
+	
+    	
+.port
+	position relative
+	height 300px
+	width 600px
+	display inline-block
+	    	
+.scroll
+	overflow-y scroll
+	overflow-x hidden
+	margin-bottom 50px
+	height 100%
+	
 
