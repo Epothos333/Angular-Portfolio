@@ -11,3 +11,11 @@ app.config([ '$routeProvider',
 		controller: 'portController'
 	})
 }]);
+
+// window.onload = function() {
+// 	var slides = document.querySelectorAll('.scroll');
+// 	slides[0].style.display = '';
+// 	console.log(slides);
+
+
+// };

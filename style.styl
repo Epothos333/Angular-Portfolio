@@ -47,6 +47,9 @@ bannerBlue = rgb(206,232,247)
     to 
     	height 200px; width 200px; left 200px; top 0; z-index: 1;
 
+.col-xs-offset-3
+	margin-bottom 80px
+
 .shadow
 	position relative
 	top 100%
@@ -207,8 +210,8 @@ body
 	margin-top 15px
 	
 .slidedown {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 25%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -219,16 +222,16 @@ body
     transition: all 1s ease;
 }
 .slidedown.ng-enter {
-    top: 0;
+    top: 100%;
 }
 .slidedown.ng-enter-active {
-    top: -105%;
+    top: 25%;
 }
 .slidedown.ng-leave {
-    top: 0;
+    top: 25%;
 }
 .slidedown.ng-leave-active {
-    top: 105%;
+    top: 100%;
 }
 
 #rightDiv, #leftDiv
