@@ -1,16 +1,38 @@
+<div class ='row text-center'>
+	<div class='col-xs-4 col-xs-offset-4'>
+		<h1>Portfolio</h1>
+		<p style='font-family:Arial'>Here are some completed projects I've worked on recently. You can view some of my other projects I'm working on by visiting my <a href="https://github.com/Epothos333?tab=repositories" target='_blank'>github</a>.</p>
+	</div>
+</div>
+
 <div class='text-center'>
-		<div class='arrow-left' ng-click='reversearoo()'></div>
+		<button ng-click='reversearoo()' type="button" class="btn btn-primary arrow-left"><</button>
 
 		<div class='text-center port'>
-
-			<div animate-div class='ani green' id="middle" ><a href="https://www.github.com" target='_blank'><img class='portPiece' src="images/epothos.png"></a></div>
-			<div animate-div class='ani red' id="left" > I was red</div>
-			<div animate-div class='ani blue' id="right"> I was blue</div>
+			<div animate-div class='ani' id="middle" >
+				<a class='pointer' href="http://pedaldetroit.club" target='_blank'><img class='portPiece' src="images/squarePedal.png"></a>
+				<div style='display:none' class='showInfo'>
+					<h3> Pedal Detroit </h3>
+					<p>Live web application for cyclists in Detroit to find routes and generate their own. Incorporates <strong>AngularJS</strong>, <strong>Google Maps API</strong>, and a <strong>weather API</strong>.</p>
+				</div>
+			</div>
+			<div animate-div class='ani' id="left" >
+				<a class='pointer' href="https://github.com/Epothos333/seat-res-starter" target='_blank'><img class='portPiece' src="images/squareSeats.png"></a>
+				<div style='display:none' class='showInfo'>
+					<h3> Seat Reservation App</h3>
+					<p>An application mocking a movie theatre seat selector. Try it out. Incorporates <strong>Jquery</strong> and <strong>bootstrap CSS</strong>.</p>
+				</div>
+			</div>
+			<div animate-div class='ani' id="right">
+				<a class='pointer' href="http://www.babylonethnicfoods.com"><img class='portPiece' src="images/Babylon.png"></a>
+				<div style='display:none' class='showInfo'>
+					<h3>Babylon Ethnic Foods</h3>
+					<p>My first website ever. A simple Mom and Pop website for a family friend's grocery store. Made using a Wix Template.</p>
+				</div>
+			</div>
 		</div>
-
-
-
-		<div class='arrow-right' ng-click='switcharoo()'></div>
+		
+		<button ng-click='switcharoo()' type="button" class="arrow-right btn btn-primary">></button>
 </div>
 
 

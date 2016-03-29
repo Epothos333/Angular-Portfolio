@@ -7,16 +7,23 @@
 </head>
 <body ng-app='myModule' class='container-fluid edged'>
 	<div class='banner row text-center'>
-		<linker go-to='"#/aboutView"' fill='"Resume"'></linker>
-		<img avatar id='avatar' ng-click="changeView('/')" src="images/epothos.png">
+		<linker go-to='"#/"' fill='"About"'></linker>
+		<img id='avatar' src="images/epothos.png">
 		<linker go-to='"#/portfolioView"' fill='"Portfolio"'></linker>
 	</div>
-	<div ng-view='' class='scroll'></div>
+	<div ng-view='' class='scroll slidedown'></div>
 	<div class='text-center'>
-		<footer class='footer'>
-			<a href="https://www.github.com/Epothos333"><img src="images/github32.png"/></a>
-			<a href="https://www.linkedin.com/edwinaoraha"><img height=32 src="images/linkedin.png"/></a>
-			<p> &#169; Edwin Aoraha Products</p>
+		<footer class='footer text-center'>
+			<div id='leftDiv'>
+				<h5> Email Me </h5>
+				<h5 style='font-family:Arial'>edwinaoraha@yahoo.com</h5>
+			</div>
+			<div id='vLine'> </div>
+			<div id='rightDiv'>
+				<a href="https://www.github.com/Epothos333"><img src="images/github32.png"/></a>
+				<a href="https://www.linkedin.com/edwinaoraha"><img height=32 src="images/linkedin.png"/></a>
+			</div>
+			<p class='marginMeBot'> &#169; Edwin Aoraha</p>
 		</footer>
 	</div>
 	 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js'></script>

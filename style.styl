@@ -54,7 +54,7 @@ bannerBlue = rgb(206,232,247)
 	height 10px
 	box-shadow 0 50px 30px #545454
 	margin 0 auto
-	border-radius 50px
+	border-radius 100px
 
 #left, #middle, #right, #lefty, #righty, #middley
 	position absolute
@@ -66,9 +66,7 @@ bannerBlue = rgb(206,232,247)
 .portPiece
 	position relative
 	width 100%
-
-.red
-	background-color red
+	border-radius 5px
 	
 #left
 	height 100px
@@ -76,7 +74,19 @@ bannerBlue = rgb(206,232,247)
 	top 100px
 	left 0px
 	animation right 1s 1
+
+.pointer
+	pointer-events none
 	
+#middle .pointer, #middley .pointer
+	pointer-events auto
+	
+.ani img
+	border 1px solid charcoal
+	padding 2px
+	
+.ani img:hover
+	border 5px solid charcoal
 	
 #lefty
 	height 100px
@@ -84,9 +94,6 @@ bannerBlue = rgb(206,232,247)
 	top 100px
 	left 0px
 	animation middley 1s 1
-	
-.green
-	background-color green
 	
 #middle
 	height 200px
@@ -99,9 +106,6 @@ bannerBlue = rgb(206,232,247)
 	width 200px
 	left 200px
 	animation righty 1s 1
-	
-.blue
-	background-color blue
 	
 #right
 	height 100px
@@ -116,19 +120,12 @@ bannerBlue = rgb(206,232,247)
 	left 500px
 	top 100px
 	animation lefty 1s 1
-	
-	// animation right 3s infinite
 
 h2
 	text-decoration underline;
 		
-.Arial
-	font-family Arial
 a 
 	text-decoration none
-	
-.indentMe
-	margin-left 50px
 	
 .footer
 	background-color bannerBlue
@@ -137,7 +134,7 @@ a
 	position fixed
 	bottom 0
 	width 100%
-	height 50px
+	height 80px
 	font-size 10px
 	margin-top 10px
 
@@ -147,12 +144,8 @@ a
 	border-radius 5px
 	margin 0
 
-.centerMe
-	margin 0 auto
-
 body
 	font-family audiowide
-	
 
 .container-fluid
 	padding-left 0
@@ -163,73 +156,31 @@ body
 .row
 	padding 0
 	margin 0
-	
-.mypicture
-	border-radius 200px
-	width 40%
-	margin 5px 15px 0 0
-	border 3px solid charcoal
-	
-@media screen and (max-width: 900px) 
-	.mypicture 
-		width 100%
-
-	
-.addTopM
-	margin-top 15px
-	border 5px ridge charcoal
-	border-radius 15px
-	background-color bannerBlue
-	box-shadow 0px 0px 15px charcoal
-	margin-right 0
 
 .blockMe
 	display block
 	margin 20px 0
 	width 100%
 	
-#rightForm, #leftForm
-	width 45%
-	display inline-block
-	
-textarea
-	position relative
-	height 20%
-	width 100%
-	margin-left 30px
-
-	
-@keyframes rotateOut {
-    to      { transform: scale(-3000px); opacity: 0; }
-}
-
-@keyframes rotateIn {
-    from      { transform: scale(3000px); opacity: 1; }
-}
-
-
-.ng-leave     
-	animation rotateOut 0.25s both ease-in
-	z-index 9999
-	
-.ng-enter
-	animation: rotateIn 0.25s both ease-in
-	z-index: 1
-	
 .arrow-right 
-	border-top 60px solid transparent
-	border-bottom 60px solid transparent
-	border-left 60px solid bannerBlue
 	display inline-block
 	margin-left 100px
-	
+	position relative
+	bottom 125px
+
 .arrow-left
-	border-top 60px solid transparent
-	border-bottom 60px solid transparent
-	border-right 60px solid bannerBlue
 	display inline-block
 	margin-right 100px
+	position relative
+	bottom 125px
 	
+.btn-primary
+	color charcoal
+	background-color bannerBlue
+	
+.btn-primary:hover
+	color bannerBlue
+	background-color charcoal	
     	
 .port
 	position relative
@@ -238,9 +189,73 @@ textarea
 	display inline-block
 	    	
 .scroll
-	overflow-y scroll
-	overflow-x hidden
 	margin-bottom 50px
 	height 100%
 	
+.showInfo
+	position relative
+	top 70px
+	
+.showInfo h3
+	margin-top 0
+	margin-bottom 5px
+	
+.showInfo p, .col-xs-offset-4 p, col-xs-offset-3 p,
+	font-size 15px
+	
+.marginMe
+	margin-top 15px
+	
+.slidedown {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slidedown.ng-enter,
+.slidedown.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.slidedown.ng-enter {
+    top: 0;
+}
+.slidedown.ng-enter-active {
+    top: -105%;
+}
+.slidedown.ng-leave {
+    top: 0;
+}
+.slidedown.ng-leave-active {
+    top: 105%;
+}
 
+#rightDiv, #leftDiv
+	display inline-block
+	
+#vLine
+	position relative
+	top 10px
+	display inline-block
+	border-left 2px solid black
+	width 1px
+	height 50px
+	
+#rightDiv
+	position relative
+	bottom 10px
+	padding 0 10px
+
+#leftDiv
+	padding 0 10px
+	
+.marginMeBot
+	position relative
+	bottom 2px
+
+.logos
+	height 128px
+	width 128px
+	margin 5px
+	

@@ -3,7 +3,7 @@ var app = angular.module('myModule', ['ngRoute', 'ngAnimate']);
 app.config([ '$routeProvider', 
 	function($routeProvider) {
 	$routeProvider.
-	  when('/aboutView', {
+	  when('/', {
 		templateUrl: 'aboutView.html'
 	}).
 	  when('/portfolioView', {
@@ -15,38 +15,33 @@ app.directive('animateDiv', function() {
 	return {
 		restrict: 'EA',
 		template: '<div class="shadow"></div><ng-transclude></ng-transclude>',
-		transclude: true
+		transclude: true,
+		link: function(scope, el, att) {
+			el.bind('click', function() {
+				if (el[0].id === 'left' || el[0].id === 'lefty') {
+					scope.switcharoo();
+				} else if (el[0].id === 'right' || el[0].id === 'righty') {
+					scope.reversearoo();
+				}
+			});
+			el.bind('mouseover', function() {
+				if (el[0].id === 'middle' || el[0].id === 'middley') {
+					el[0].children[1].children[1].style.display = '';
+				}
+			});
+			el.bind('mouseout', function() {
+				if (el[0].id === 'middle' || el[0].id === 'middley') {
+					el[0].children[1].children[1].style.display = 'none';
+				}
+			});
+
+		}
 	}
 });
 
 
 
 		
-// window.onload =  function() {
-
-// var button = document.getElementById('animateBtn');
-// var left = document.getElementById('green');
-// var center = document.getElementById('red');
-// var right = document.getElementById('blue');
-
-// button.addEventListener('click', function() {
-// 	left.style.animation = 'left 3s 1'
-// 	right.style.animation = 'right 3s 1'
-// 	center.style.animation = 'middle 3s 1'
-// 	setTimeout(function() {
-// 		left.style.height = '200px';
-// 		left.style.width = '200px';
-// 		left.style.left = '205px';
-// 		right.style.right = '210px'
-// 		center.style.height = '100px';
-// 		center.style.width = '100px';
-// 		center.style.left = '205px';
-// 	}, 3000);
-
-// 	//set animations to classes. Add and remove classes. Maybe keep positions perm.
-// })
-
-// }
 app.controller('portController', [ '$scope', function($scope) {
 
 	var divs = document.getElementsByClassName('ani');
