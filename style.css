@@ -231,6 +231,7 @@ body {
 .showInfo {
   position: relative;
   top: 70px;
+  display: none;
 }
 .showInfo h3 {
   margin-top: 0;
@@ -245,10 +246,11 @@ font-size 15px,
 }
 .slidedown {
   position: absolute;
-  top: 25%;
+  top: 180px;
   left: 0;
   width: 100%;
   height: 100%;
+  display: block;
 }
 .slidedown.ng-enter,
 .slidedown.ng-leave {
@@ -259,10 +261,10 @@ font-size 15px,
   top: 100%;
 }
 .slidedown.ng-enter-active {
-  top: 25%;
+  top: 180px;
 }
 .slidedown.ng-leave {
-  top: 25%;
+  top: 180px;
 }
 .slidedown.ng-leave-active {
   top: 100%;
@@ -295,4 +297,43 @@ font-size 15px,
   height: 128px;
   width: 128px;
   margin: 5px;
+}
+@media (max-width: 910px) {
+  .arrow-right,
+  .arrow-left {
+    display: none;
+  }
+  .scroll {
+    overflow: scroll;
+  }
+}
+@media (max-width: 650px) {
+  .arrow-right {
+    display: inline;
+    position: relative;
+    top: 250px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 50px;
+  }
+  .arrow-left {
+    display: inline;
+    position: relative;
+    top: 600px;
+    height: 50px;
+    width: 50px;
+  }
+  #left,
+  #lefty,
+  #right,
+  #righty {
+    display: none;
+  }
+  #middley,
+  #middle {
+    animation: none;
+    display: inline;
+    left: 20%;
+    pointer-events: none;
+  }
 }

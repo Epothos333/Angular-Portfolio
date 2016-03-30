@@ -13,7 +13,7 @@ app.directive('animateDiv', function() {
 			});
 			el.bind('mouseover', function() {
 				if (el[0].id === 'middle' || el[0].id === 'middley') {
-					el[0].children[1].children[1].style.display = '';
+					el[0].children[1].children[1].style.display = 'block';
 				}
 			});
 			el.bind('mouseout', function() {
