@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seat Reservation App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container">
+
+<!-- Edwin was here. And he's upset! -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img class="navbar-brand" src="newLogoBlue.png"/>
+      
+      <a class="navbar-brand" href="#"> Theatre Name</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- nav bar end -->
+
+  <header>
+    <h1>Reserve Yo Seat! </h1> <span id="point" class="glyphicon glyphicon-hand-down"></span>
+  </header>
+  
+  <p>Cupcake ipsum dolor sit amet. Donut topping croissant sesame snaps wafer marzipan cake sweet roll. Fruitcake caramels pudding jelly beans jelly apple pie. Bear claw candy brownie caramels halvah brownie powder. Fruitcake fruitcake sesame snaps candy canes bonbon donut chupa chups pastry. Gummi bears brownie topping tart gingerbread danish.</p>
+
+  <section class="seat-chart">
+
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <form>
+          <div class="col-sm-4 col-xs-12 input-field">
+            <h3>Name</h3>
+            <input type="text" id="nameInput">
+            <h3> Seats Selected </h3>
+            <p id="selectedSeat">  </p>
+            <h3 id="seatNumbers">Reservation Date</h3>
+            <input type="date" id="dateInput">
+            <button id="reserve-btn" type="button"><span class="glyphicon glyphicon-ok"></span></button>
+          </div>
+          <div class="col-sm-4 col-xs-6 message-div">
+            <h3>Special Accomodations</h3>
+            <textarea id="messageInput" rows="9"></textarea>
+          </div>
+          <div class="col-sm-4 col-xs-6 reservation">
+            <h3>Reservation Policy</h3>
+            <ul>
+              <li> #1 No children or young adults </li>
+              <li> #2 In fact, no people at all! Dogs only. </li>
+              <li> #3 The event is about 12 hours long, so please do not bring your own food and drinks. We need more money</li>
+              <li> #4 Don't ask questions. It's rude. </li>
+              <li> #5 Have fun, but not too much fun. Or at the very least, don't show it. This is a cool dogs event.</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div id="copyrightInfo">
+      <span class="glyphicon glyphicon-copyright-mark"></span> 2016 Ye Olde Front-End Theatre
+    </div>
+    <div id="footerLinks">
+      |
+      <a href="">Contact</a>
+      |
+      <a href="">Help</a>
+    </div>
+  </footer>
+
+
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

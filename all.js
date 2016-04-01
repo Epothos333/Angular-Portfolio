@@ -4,10 +4,10 @@ app.config([ '$routeProvider',
 	function($routeProvider) {
 	$routeProvider.
 	  when('/', {
-		templateUrl: 'aboutView.html'
+		templateUrl: 'Views/aboutView.html'
 	}).
 	  when('/portfolioView', {
-		templateUrl: 'portfolioView.html',
+		templateUrl: 'Views/portfolioView.html',
 		controller: 'portController'
 	})
 }]);
